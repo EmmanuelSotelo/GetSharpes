@@ -1,4 +1,4 @@
-GetShapes
+GetSharpes
 =========
 Copyright Emmanuel Sotelo 2013
 EmmanuelSotelo.NET
