@@ -53,7 +53,7 @@ GetSharpes <- function(symbols, startDate, endDate, save.data = FALSE, save.name
 		)
 		) next;	  
     
-		data <- OderByDate(data)
+		data <- OrderByDate(data)
     
 		dailyReturns <- DailyReturns(data$Adj.Close) # Get daily retuns for current ticker symbol   
 		sharpeRatio <- SharpeRatio(dailyReturns) # Compute Sharp Ratio for current ticker symbol
@@ -97,7 +97,7 @@ SharpeRatio <- function(dailyReturns){
 
 # Orders data frame by "Date" column in Ascending order
 # Input: A data frame containing a column named "Date"
-OderByDate <- function(dataframe){  
+OrderByDate <- function(dataframe){  
  
 	return(dataframe[order(dataframe$Date) ,])
 }
